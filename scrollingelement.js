@@ -17,7 +17,7 @@ if (!('scrollingElement' in document)) (function() {
 			return element instanceof HTMLBodyElement;
 		}
 		// Fall back to a `tagName` check for old browsers.
-		return /body/i.test(element.tagName);
+		return document.body.tagName.toLowerCase() === 'body';
 	}
 
 	function getNextBodyElement(frameset) {
